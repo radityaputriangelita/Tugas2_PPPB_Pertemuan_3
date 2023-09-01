@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    android:background="@drawable/gradientbackground"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/img_phone"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:importantForAccessibility="no"
+        android:src="@drawable/logowhitetinder" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/name_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Email "
+        android:layout_below="@+id/img_phone"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/edit_rounded"
+        app:startIconDrawable="@drawable/ic_person"
+        app:boxStrokeWidth="0dp"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name_input_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/pass_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="password"
+        app:endIconMode="password_toggle"
+        android:layout_below="@+id/name_input_layout"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edit_rounded"
+        app:startIconDrawable="@drawable/ic_lock"
+        app:boxStrokeWidth="0dp"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/pass_input_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pass_input_layout"
+        android:text="Remember Me"
+        android:layout_centerVertical="true"
+        android:textColor="@color/white"
+        android:buttonTint="#FFF"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pass_input_layout"
+        android:text="I Forget My Password"
+        android:textColor="@color/white"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBaseline="@+id/checkbox"/>
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkbox"
+        android:layout_centerHorizontal="true"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/darker_pink"
+        />
+    <TextView
+        android:id="@+id/other_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/medsos"
+        android:layout_centerHorizontal="true"
+        android:text="Or Login With"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/white"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/medsos"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/google_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/google2"/>
+
+        <ImageView
+            android:id="@+id/fb_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="20dp"
+            android:layout_toRightOf="@id/google_icon"
+            android:src="@drawable/fb"/>
+
+        <ImageView
+            android:id="@+id/x_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="20dp"
+            android:layout_toRightOf="@id/fb_icon"
+            android:src="@drawable/x"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
